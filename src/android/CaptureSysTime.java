@@ -1,4 +1,4 @@
-package com.zhxjz.map.plugin;
+﻿package com.zhxjz.map.plugin;
 
 import java.text.SimpleDateFormat;
 
@@ -18,10 +18,8 @@ public class CaptureSysTime extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HH:mm:ss");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			String date = dateFormat.format(new java.util.Date());
-			date = date.replace("-", "T");
-			date = date.replaceAll(":", "");
 			callbackContext.success(date);
 			return true;
 		} catch (Exception e) {

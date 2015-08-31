@@ -1,12 +1,12 @@
 var cordova = require('cordova');
 
-var captureSysTimePlugin = {
+var captureSysTime = {
 
-	"getSysTime" : function(onSuccessFn, onErrorFn){
-		cordova.exec(onSuccessFn, onErrorFn, 'CaptureSysTimePlugin', 'getSysTime', []); 
+	"get" : function(onSuccessFn, onErrorFn){
+		cordova.exec(onSuccessFn, onErrorFn, 'CaptureSysTimePlugin', 'get', []); 
 	}
 
 };
 
-module.exports = captureSysTimePlugin;
+module.exports = captureSysTime;
 
