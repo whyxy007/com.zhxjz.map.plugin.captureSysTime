@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.zhxjz.map.plugin.captureSysTime"
+      version="1.0.0">
+    <name>CaptureSysTime</name>
+    <description>Capture System Time</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,Capture System Time</keywords>
+
+    <js-module src="www/captureSysTime.js" name="captureSysTime">
+        <clobbers target="captureSysTime" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CaptureSysTimePlugin" >
+                <param name="android-package" value="com.zhxjz.map.plugin.CaptureSysTime"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CaptureSysTime.java" target-dir="src/com/zhxjz/map/plugin" />
+    </platform>
+
+   
+</plugin>
